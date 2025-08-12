@@ -58,16 +58,11 @@ footer {
     color: white;
     padding: 10px;
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    text-align: center;
 }
 
 .social-links {
-    margin-top: 0;
-    position: absolute;
-    right: 20px;
+    margin-top: 15px;
 }
 
 .instagram-link {
@@ -78,9 +73,11 @@ footer {
     border: 2px solid white;
     border-radius: 20px;
     transition: all 0.3s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
+    max-width: fit-content;
+    margin: 0 auto;
 }
 
 .instagram-link:hover {
