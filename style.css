@@ -24,6 +24,12 @@ h1 {
     margin: 0;
 }
 
+h1:last-of-type {
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 main {
     padding: 20px;
 }
