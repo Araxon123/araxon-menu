@@ -1,14 +1,16 @@
 // Modal functionality
-function openModal(title, price, imageSrc) {
+function openModal(title, price, imageSrc, description) {
     const modal = document.getElementById('productModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalPrice = document.getElementById('modalPrice');
     const modalImage = document.getElementById('modalImage');
+    const modalDescription = document.querySelector('.modal-description');
     
     modalTitle.textContent = title;
     modalPrice.textContent = price;
     modalImage.src = imageSrc;
     modalImage.alt = title;
+    modalDescription.textContent = description;
     
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden'; // Prevent scrolling
