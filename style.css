@@ -7,6 +7,35 @@ body {
     text-align: center;
 }
 
+/* Favicon styling - show only the face/portrait part */
+link[rel="icon"] {
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Additional favicon styling for better face display */
+link[rel="icon"] img {
+    object-fit: cover;
+    object-position: center top;
+    width: 32px;
+    height: 32px;
+}
+
+/* Temporary notice styling */
+.temp-notice {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 3px solid #cc0000;
+}
+
+.temp-notice h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 header {
     background: #000000;
     color: white;
@@ -14,7 +43,7 @@ header {
 }
 
 .logo {
-    width: 180px; /* Larger logo */
+    width: 220px; /* Larger logo */
     max-width: 100%;
     display: block;
     margin: 0 auto 10px;
@@ -24,11 +53,7 @@ h1 {
     margin: 0;
 }
 
-h1:last-of-type {
-    color: #ff0000;
-    font-weight: bold;
-    margin-top: 10px;
-}
+/* Removed h1:last-of-type styling since it was affecting the menu title */
 
 main {
     padding: 20px;
