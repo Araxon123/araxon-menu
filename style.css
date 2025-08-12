@@ -14,7 +14,7 @@ header {
 }
 
 .logo {
-    width: 180px; /* Μεγαλύτερο λογότυπο */
+    width: 180px; /* Larger logo */
     max-width: 100%;
     display: block;
     margin: 0 auto 10px;
@@ -60,7 +60,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Στυλ για το τηλέφωνο σαν κουμπί */
+/* Style for phone as button */
 .call-text {
     margin-bottom: 15px;
 }
