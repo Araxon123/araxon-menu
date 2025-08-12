@@ -129,20 +129,23 @@ footer {
 
 .call-text a {
     display: inline-block;
-    background-color: orange;
-    color: #000000;
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    color: #ffffff;
     font-size: 18px;
     font-weight: bold;
     padding: 5px 12px;
     border-radius: 20px;
     text-decoration: none;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease, transform 0.2s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .call-text a:hover {
-    background-color: darkorange;
+    background: linear-gradient(45deg, #ff8c42, #ff6b35);
     transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
 
 /* Review link styling */
@@ -344,4 +347,76 @@ footer {
     font-size: 16px;
     color: #666;
     font-weight: 500;
+}
+
+/* Business Hours Section */
+.hours-section {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 2px solid #444;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hours-section h3 {
+    color: #ff6b35;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.hours-content {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.hours-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin: 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.hours-time {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 12px 0;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.hours-note {
+    font-size: 14px;
+    color: #b0b0b0;
+    font-style: italic;
+    margin: 15px 0;
+    padding: 8px 15px;
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Copyright styling */
+.copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.copyright p {
+    color: #999;
+    font-size: 14px;
+    margin: 0;
+    font-style: italic;
 }
