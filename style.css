@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background: #003366;
+    background: #000000;
     color: white;
     padding: 20px;
 }
@@ -33,7 +33,7 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #003366;
+    border-bottom: 2px solid #000000;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -54,10 +54,44 @@ li {
 }
 
 footer {
-    background: #003366;
+    background: #000000;
     color: white;
     padding: 10px;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.social-links {
+    margin-top: 0;
+    position: absolute;
+    right: 20px;
+}
+
+.instagram-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.instagram-link:hover {
+    background-color: white;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.instagram-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Style for phone as button */
@@ -68,13 +102,13 @@ footer {
 .call-text a {
     display: inline-block;
     background-color: orange;
-    color: #003366;
-    font-size: 20px;
+    color: #000000;
+    font-size: 18px;
     font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 30px;
+    padding: 5px 12px;
+    border-radius: 20px;
     text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
