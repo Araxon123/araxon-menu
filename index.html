@@ -12,13 +12,14 @@
         <img src="logo.png" alt="ΑΡΑΞΟΝ Coffee & Food" class="logo">
         <div class="call-text">Για παραγγελία καλέστε στο: <a href="tel:2105599970">2105599970</a></div>
         <h1>Μενού</h1>
+        <h1>ΦΤΙΑΧΝΟΥΜΕ ΤΗΝ ΣΕΛΙΔΑ ΤΟ ΜΕΝΟΥ ΔΕΝ ΕΙΝΑΙ ΣΩΣΤΟ ΑΚΟΜΑ</h1>
     </header>
 
     <main>
         <section>
             <h2>Καφές</h2>
             <ul>
-                <li>Freddo Espresso <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Freddo Espresso', '€2.20', 'images/freddo-espresso.png')">Freddo Espresso <span>€2.20</span></li>
                 <li>Freddo Cappuccino <span>€2.40</span></li>
                 <li>Cappuccino <span>€2.50</span></li>
             </ul>
@@ -27,24 +28,25 @@
         <section>
             <h2>Ροφήματα</h2>
             <ul>
-                <li>Hot Chocolate <span>€2.50</span></li>
-                <li>Tea <span>€1.80</span></li>
+                <li>Ζεστή Σοκολάτα <span>€2.50</span></li>
+                <li>Κρύα Σοκολάτα <span>€2.50</span></li>
+                <li>Τσάι <span>€1.80</span></li>
             </ul>
         </section>
 
         <section>
-            <h2>Σνακ</h2>
+            <h2>Σφολιάτες</h2>
             <ul>
-                <li>Toast <span>€2.00</span></li>
+                <li>Τυρόπιτα <span>€2.00</span></li>
+                <li>Γραβιέρα <span>€1.50</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Φαγητό</h2>
+            <ul>
+                <li>Τοστ (γαλοπούλα & τυρί) <span>€2.00</span></li>
                 <li>Butter Croissant <span>€1.50</span></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Γλυκά</h2>
-            <ul>
-                <li>Cheesecake <span>€3.50</span></li>
-                <li>Chocolate Cake <span>€3.00</span></li>
             </ul>
         </section>
     </main>
@@ -60,5 +62,20 @@
             </a>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <p class="modal-price" id="modalPrice"></p>
+            <p class="modal-description">Perfectly crafted cold espresso served over ice for a refreshing coffee experience.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
