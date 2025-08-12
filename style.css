@@ -120,6 +120,30 @@ footer {
     transform: scale(1.05);
 }
 
+/* Review link styling */
+.review-text {
+    margin-bottom: 15px;
+}
+
+.review-link {
+    display: inline-block;
+    background-color: #4285f4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.review-link:hover {
+    background-color: #3367d6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     li {
@@ -261,6 +285,18 @@ footer {
 .location-section h2 {
     color: #000;
     margin-bottom: 20px;
+}
+
+.location-title a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.location-title a:hover {
+    color: #ff6b35;
+    text-decoration: underline;
 }
 
 .map-container {
