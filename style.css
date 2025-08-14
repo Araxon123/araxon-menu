@@ -70,6 +70,56 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Collapsible menu styling */
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #f8f8f8;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.menu-header:hover {
+    background: #e8e8e8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu-header:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    transition: transform 0.3s ease;
+}
+
+.menu-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+section.expanded .menu-header {
+    background: #000000;
+    color: white;
+}
+
+section.expanded .menu-header .menu-icon,
+section.expanded .menu-header .menu-title {
+    color: white;
+}
+
 ul {
     list-style: none;
     padding: 0;
