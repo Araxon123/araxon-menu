@@ -25,15 +25,12 @@ function closeModal() {
 // Collapsible menu functionality
 function toggleMenu(section) {
     const content = section.querySelector('ul');
-    const icon = section.querySelector('.menu-icon');
     
     if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
-        icon.textContent = '▼';
         section.classList.add('expanded');
     } else {
         content.style.display = 'none';
-        icon.textContent = '▶';
         section.classList.remove('expanded');
     }
 }
@@ -50,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const header = document.createElement('div');
         header.className = 'menu-header';
         header.innerHTML = `
-            <span class="menu-icon">▶</span>
             <span class="menu-title">${title.textContent}</span>
         `;
         header.onclick = () => toggleMenu(section);
