@@ -43,10 +43,32 @@ document.addEventListener('DOMContentLoaded', function() {
         const title = section.querySelector('h2');
         const content = section.querySelector('ul');
         
-        // Create clickable header
+        // Create clickable header with icon
         const header = document.createElement('div');
         header.className = 'menu-header';
+        
+        // Get icon based on menu title
+        let icon = '';
+        const titleText = title.textContent.toLowerCase();
+        
+        if (titleText.includes('καφές') || titleText.includes('coffee')) {
+            icon = '☕';
+        } else if (titleText.includes('ροφήματα') || titleText.includes('drinks')) {
+            icon = '🥤';
+        } else if (titleText.includes('σφολιάτες') || titleText.includes('pastries')) {
+            icon = '🥐';
+        } else if (titleText.includes('φαγητό') || titleText.includes('food')) {
+            icon = '🍔';
+        } else if (titleText.includes('σαλάτες') || titleText.includes('salads')) {
+            icon = '🥗';
+        } else if (titleText.includes('αναψυκτικά') || titleText.includes('beverages')) {
+            icon = '🥤';
+        } else {
+            icon = '🍽️'; // Default icon
+        }
+        
         header.innerHTML = `
+            <span class="menu-icon">${icon}</span>
             <span class="menu-title">${title.textContent}</span>
         `;
         header.onclick = () => toggleMenu(section);
