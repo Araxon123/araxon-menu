@@ -57,10 +57,12 @@ h1 {
 
 main {
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -72,51 +74,49 @@ h2 {
 
 /* Collapsible menu styling */
 .menu-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 10px 15px;
-    background: #f8f8f8;
+    display: inline-block;
+    background-color: #f8f8f8;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
     border: 2px solid #000000;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     user-select: none;
+    margin-bottom: 8px;
+    min-width: 250px;
+    text-align: center;
 }
 
 .menu-header:hover {
-    background: #e8e8e8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #e8e8e8;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .menu-header:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.menu-icon {
-    font-size: 16px;
-    font-weight: bold;
-    color: #000000;
-    transition: transform 0.3s ease;
+    transform: scale(1.02);
 }
 
 .menu-title {
-    font-size: 18px;
-    font-weight: bold;
     color: #000000;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 section.expanded .menu-header {
-    background: #000000;
+    background-color: #000000;
+}
+
+section.expanded .menu-header .menu-title {
     color: white;
 }
 
-section.expanded .menu-header .menu-icon,
-section.expanded .menu-header .menu-title {
-    color: white;
+section.expanded .menu-header:hover {
+    background-color: #333333;
 }
 
 ul {
