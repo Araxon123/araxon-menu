@@ -25,36 +25,100 @@
         <section>
             <h2>Καφές</h2>
             <ul>
-                <li class="clickable-item" onclick="openModal('Freddo Espresso', '€2.20', 'images/freddo-espresso.png', 'Perfectly crafted cold espresso served over ice for a refreshing coffee experience.')">Freddo Espresso <span>€2.20</span></li>
-                <li class="clickable-item" onclick="openModal('Freddo Cappuccino', '€2.40', 'images/freddo-Cappuccino.webp', 'Smooth cold cappuccino with frothy milk, served over ice for a creamy coffee delight.')">Freddo Cappuccino <span>€2.40</span></li>
-                <li>Cappuccino <span>€2.50</span></li>
+                <li class="clickable-item" onclick="openModal('Freddo Espresso', '€2.20', 'images/freddo-espresso.png', 'Κρύος εσπρέσο σερβιρισμένος πάνω σε πάγο για μια δροσερή εμπειρία καφέ.')">Freddo Espresso <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Freddo Cappuccino', '€2.40', 'images/freddo-Cappuccino.webp', 'Απαλός κρύος καπουτσίνο με αφρώδες γάλα, σερβιρισμένος πάνω σε πάγο για μια κρεμώδη απόλαυση καφέ.')">Freddo Cappuccino <span>€2.40</span></li>
+                <li class="clickable-item" onclick="openModal('Cappuccino', '€2.40', '', 'Κλασικό καπουτσίνο με τέλεια ισορροπία εσπρέσο, ατμοποιημένο γάλα και αφρό γάλακτος.')">Cappuccino <span>€2.40</span></li>
+                <li class="clickable-item" onclick="openModal('Cappuccino Mono', '€2.00', '', 'Καπουτσίνο με μία δόση εσπρέσο, ατμοποιημένο γάλα και αφρό γάλακτος.')">Cappuccino Mono <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Frappe', '€2.00', '', 'Ελληνικό frappe καφέ με στιγμιαίο καφέ, νερό, ζάχαρη και γάλα, αναδευμένο στην τελειότητα.')">Frappe <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Ελληνικός', '€1.40', '', 'Παραδοσιακός ελληνικός καφές που παρασκευάζεται σε μπρίκι, σερβίρεται με την κατακάθα.')">Ελληνικός <span>€1.40</span></li>
+                <li class="clickable-item" onclick="openModal('Ελληνικός Διπλός', '€1.90', '', 'Διπλής δόσης ελληνικός καφές για όσους προτιμούν πιο δυνατό ροφήμα.')">Ελληνικός Διπλός <span>€1.90</span></li>
+                <li class="clickable-item" onclick="openModal('Nes Cafe', '€2.00', '', 'Απαλός και κρεμώδης παγωμένος καφές με γάλα και ζάχαρη.')">Nes Cafe <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Espresso Mono', '€1.50', '', 'Μία δόση καθαρού εσπρέσο, τέλεια για τους φανατικούς του καφέ.')">Espresso Mono <span>€1.50</span></li>
+                <li class="clickable-item" onclick="openModal('Espresso Double', '€2.20', '', 'Διπλή δόση εσπρέσο για μια πιο δυνατή εμπειρία καφέ.')">Espresso Double <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Γαλλικός', '€2.20', '', 'Γαλλικός καφές με πλούσια, πλήρη γεύση.')">Γαλλικός <span>€2.20</span></li>
             </ul>
         </section>
 
         <section>
             <h2>Ροφήματα</h2>
             <ul>
-                <li>Ζεστή Σοκολάτα <span>€2.50</span></li>
-                <li>Κρύα Σοκολάτα <span>€2.50</span></li>
-                <li>Τσάι <span>€1.80</span></li>
+                <li class="clickable-item" onclick="openModal('Φυσικό Πορτοκάλι', '€3.00', '', 'Φρεσκοστυμμένος χυμός πορτοκαλιού, φυσικά γλυκός και δροσερός.')">Φυσικό Πορτοκάλι <span>€3.00</span></li>
+                <li class="clickable-item" onclick="openModal('Fredoccino', '€4.00', '', 'Νόστιμος συνδυασμός καφέ και σοκολάτας, σερβιρισμένος κρύος με κρέμα γάλακτος.')">Fredoccino <span>€4.00</span></li>
+                <li class="clickable-item" onclick="openModal('Σοκολάτα Κρύα', '€3.00', '', 'Πλούσιο κρύο ποτό σοκολάτας, τέλεια για τις ζεστές μέρες.')">Σοκολάτα Κρύα <span>€3.00</span></li>
+                <li class="clickable-item" onclick="openModal('Σοκολάτα Ζεστή', '€3.00', '', 'Ζεστό, παρηγορητικό ζεστή σοκολάτα με πλούσια γεύση κακάο.')">Σοκολάτα Ζεστή <span>€3.00</span></li>
+                <li class="clickable-item" onclick="openModal('Γρανίτα', '€3.50', '', 'Δροσερό ιταλικό γλυκίσμα πάγου, τέλεια καλοκαιρινή απόλαυση.')">Γρανίτα <span>€3.50</span></li>
+                <li class="clickable-item" onclick="openModal('Milkshake', '€5.50', '', 'Κρεμώδες, παχύ milkshake σε διάφορες γεύσεις.')">Milkshake <span>€5.50</span></li>
+                <li class="clickable-item" onclick="openModal('Τσάι Ζεστό', '€1.50', '', 'Ζεστό τσάι που περιλαμβάνει μαύρο, πράσινο και βότανα.')">Τσάι Ζεστό <span>€1.50</span></li>
+                <li class="clickable-item" onclick="openModal('Smoothie', '€5.00', '', 'Φρέσκα smoothie φρούτων αναμειγμένα με γιαούρτι ή χυμό.')">Smoothie <span>€5.00</span></li>
             </ul>
         </section>
 
         <section>
             <h2>Σφολιάτες</h2>
             <ul>
-                <li>Τυρόπιτα <span>€2.00</span></li>
-                <li>Γραβιέρα <span>€1.50</span></li>
+                <li class="clickable-item" onclick="openModal('Τυρόπιτα', '€1.50', '', 'Παραδοσιακή ελληνική τυρόπιτα με φύλλο κρούστας και γέμιση φέτα τυριού.')">Τυρόπιτα <span>€1.50</span></li>
+                <li class="clickable-item" onclick="openModal('Γραβιέρα', '€2.20', '', 'Γλυκός τυρόπιτα με γέμιση τυρί γραβιέρα, πλούσια και κρεμώδης.')">Γραβιέρα <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Ζαμποντυρόπιτα', '€2.20', '', 'Νόστιμη πίτα γεμισμένη με ζαμπόν και τυρί, τέλεια αλμυρή απόλαυση.')">Ζαμποντυρόπιτα <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Λουκανικοπίτα', '€2.00', '', 'Παραδοσιακή πίτα γεμισμένη με ελληνικό λουκάνικο και βότανα.')">Λουκανικοπίτα <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Πίτσα', '€2.50', '', 'Φρέσκο φέτα πίτσας με σάλτσα ντομάτας και τυρί μοτσαρέλα.')">Πίτσα <span>€2.50</span></li>
+                <li class="clickable-item" onclick="openModal('Κρουασάν Σοκολάτα', '€2.00', '', 'Βουτυρένιο κρουασάν γεμισμένο με πλούσια σοκολάτα, τέλεια πρωινή απόλαυση.')">Κρουασάν Σοκολάτα <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Κρουασάν Βουτύρου', '€2.00', '', 'Κλασικό κρουασάν βουτύρου, φύλλο και χρυσό καφέ.')">Κρουασάν Βουτύρου <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Κρουασάν Φυστίκι', '€2.00', '', 'Νόστιμο κρουασάν γεμισμένο με κρέμα φυστικιού.')">Κρουασάν Φυστίκι <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Μπουγάτσα', '€2.20', '', 'Παραδοσιακή ελληνική κρέμα πίτα με φύλλο κρούστας και κανέλα.')">Μπουγάτσα <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Σπανακόπιτα', '€2.00', '', 'Ελληνική σπανακόπιτα με τυρί φέτα και βότανα σε φύλλο κρούστας.')">Σπανακόπιτα <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Κουλούρι Θεσ/Νίκης', '€0.90', '', 'Παραδοσιακό κουλούρι Θεσσαλονίκης με σουσάμι.')">Κουλούρι Θεσ/Νίκης <span>€0.90</span></li>
+                <li class="clickable-item" onclick="openModal('Κουλούρι με Τυρί', '€2.00', '', 'Φρέσκο κουλούρι γεμισμένο με τυρί, τέλεια αλμυρή σνακ.')">Κουλούρι με Τυρί <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Κρουασάν Ζαμπόν Τυρί', '€2.50', '', 'Κρουασάν γεμισμένο με ζαμπόν και τυρί, χορταστική πρωινή επιλογή.')">Κρουασάν Ζαμπόν Τυρί <span>€2.50</span></li>
+                <li class="clickable-item" onclick="openModal('Γεμ Κουλούρι', '€2.00', '', 'Γεμισμένο κουλούρι με διάφορες νόστιμες γεμίσεις.')">Γεμ Κουλούρι <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Φιλαδελφία', '€2.20', '', 'Κρεμώδης σφολιάτα Philadelphia τυρί, πλούσια και απαλή.')">Φιλαδελφία <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Φιλαδελφία Γαλοπούλα', '€2.20', '', 'Σφολιάτα Philadelphia τυρί και γαλοπούλα, αλμυρή απόλαυση.')">Φιλαδελφία Γαλοπούλα <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Πεινιρλί', '€2.50', '', 'Παραδοσιακό ελληνικό ψωμί σε σχήμα βάρκας γεμισμένο με τυρί και γαρνιτούρες.')">Πεινιρλί <span>€2.50</span></li>
+                <li class="clickable-item" onclick="openModal('Πατατόπιτα', '€2.00', '', 'Ελληνική πατατόπιτα με βότανα και ελαιόλαδο, χορτοφαγική επιλογή.')">Πατατόπιτα <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Τυρόπιτα Κουρού', '€1.60', '', 'Τυρόπιτα στυλ κουρού με τραγανό φύλλο και γέμιση φέτα τυριού.')">Τυρόπιτα Κουρού <span>€1.60</span></li>
+                <li class="clickable-item" onclick="openModal('Κοτοπίτα', '€2.50', '', 'Ελληνική κοτόπιτα με τρυφερό κοτόπουλο και βότανα σε φύλλο.')">Κοτοπίτα <span>€2.50</span></li>
+                <li class="clickable-item" onclick="openModal('Τυρόπιτα Χωριάτικη', '€2.50', '', 'Παραδοσιακή χωριάτικη τυρόπιτα με αυθεντικές ελληνικές γεύσεις.')">Τυρόπιτα Χωριάτικη <span>€2.50</span></li>
+                <li class="clickable-item" onclick="openModal('Μπιφτεκόπιτα', '€2.50', '', 'Ελληνική πίτα κρέατος γεμισμένη με καρυκευμένο κιμά και βότανα.')">Μπιφτεκόπιτα <span>€2.50</span></li>
+                <li class="clickable-item" onclick="openModal('Πολύσπορη Σφολιάτα', '€2.20', '', 'Πολύσπορη σφολιάτα με διάφορα σπόρια για επιπλέον θρεπτικότητα και γεύση.')">Πολύσπορη Σφολιάτα <span>€2.20</span></li>
+                <li class="clickable-item" onclick="openModal('Κουλούρι Ντομάτα Ελιά', '€2.00', '', 'Κουλούρι με γέμιση ντομάτα και ελιά, μεσογειακές γεύσεις.')">Κουλούρι Ντομάτα Ελιά <span>€2.00</span></li>
             </ul>
         </section>
 
         <section>
             <h2>Φαγητό</h2>
             <ul>
-                <li>Τοστ (γαλοπούλα & τυρί) <span>€2.00</span></li>
-                <li class="clickable-item" onclick="openModal('Caesar Salad', '€8.00', 'images/Ceasar.png', 'Fresh romaine lettuce with Caesar dressing, parmesan cheese, croutons, and grilled chicken. A classic favorite!')">Caesar Salad <span>€8.00</span></li>
+                <li class="clickable-item" onclick="openModal('Τοστ (γαλοπούλα & τυρί)', '€2.00', '', 'Φρέσκο σάντουιτς με γαλοπούλα και τυρί, ψημένο στην τελειότητα.')">Τοστ (γαλοπούλα & τυρί) <span>€2.00</span></li>
+                <li class="clickable-item" onclick="openModal('Μπρέτζελ Μπαγκέτα Αέρος', '€4.00', '', 'Μπαγκέτα τύπου μπρέτζελ με ζαμπόν αέρος, τυρί και φρέσκα λαχανικά.')">Μπρέτζελ Μπαγκέτα Αέρος <span>€4.00</span></li>
+                <li class="clickable-item" onclick="openModal('Βιεννέζικη Μπαγκέτα Γαλοπούλα', '€3.50', '', 'Μπαγκέτα βιεννέζικη με γαλοπούλα, τυρί και μαρούλι.')">Βιεννέζικη Μπαγκέτα Γαλοπούλα <span>€3.50</span></li>
+                <li class="clickable-item" onclick="openModal('Ολικής Μπαγκέτα Γαλοπούλα', '€3.50', '', 'Μπαγκέτα ολικής άλεσης με γαλοπούλα, τυρί και λαχανικά.')">Ολικής Μπαγκέτα Γαλοπούλα <span>€3.50</span></li>
+                <li class="clickable-item" onclick="openModal('Λευκή Μπαγκέτα Κοτόπουλο', '€4.00', '', 'Λευκή μπαγκέτα με ψητό κοτόπουλο, τυρί και σως.')">Λευκή Μπαγκέτα Κοτόπουλο <span>€4.00</span></li>
+                <li class="clickable-item" onclick="openModal('Κρύο Κουλούρι Γεμιστό', '€3.50', '', 'Δροσερό γεμιστό κουλούρι με τυρί και αλλαντικό.')">Κρύο Κουλούρι Γεμιστό <span>€3.50</span></li>
+                <li class="clickable-item" onclick="openModal('Αραβική Γαλοπούλα', '€3.00', '', 'Αραβική πίτα με γαλοπούλα, τυρί και λαχανικά.')">Αραβική Γαλοπούλα <span>€3.00</span></li>
+                <li class="clickable-item" onclick="openModal('Αραβική Κοτόπουλο', '€3.50', '', 'Αραβική πίτα με κοτόπουλο, τυρί και σως.')">Αραβική Κοτόπουλο <span>€3.50</span></li>
+                <li class="clickable-item" onclick="openModal('Πολύσπορη Μπαγκέτα Κοτόπουλο', '€4.00', '', 'Πολύσπορη μπαγκέτα με κοτόπουλο και φρέσκα λαχανικά.')">Πολύσπορη Μπαγκέτα Κοτόπουλο <span>€4.00</span></li>
+                <li class="clickable-item" onclick="openModal('Τσιαμπάτα Λευκή Ζαμπόν Αυγό', '€3.50', '', 'Λευκή τσιαμπάτα με ζαμπόν, αυγό και τυρί.')">Τσιαμπάτα Λευκή Ζαμπόν Αυγό <span>€3.50</span></li>
+                <li class="clickable-item" onclick="openModal('Λευκή Μπαγκέτα Ζαμπόν', '€3.50', '', 'Λευκή μπαγκέτα με ζαμπόν και τυρί.')">Λευκή Μπαγκέτα Ζαμπόν <span>€3.50</span></li>
             </ul>
         </section>
+        
+        <section>
+            <h2>Σαλάτες</h2>
+            <ul>
+                <li class="clickable-item" onclick="openModal('Αγγουροντομάτα', '€5.00', '', 'Φρέσκια σαλάτα με αγγούρι και ντομάτα.')">Αγγουροντομάτα <span>€5.00</span></li>
+                <li class="clickable-item" onclick="openModal('Αγγουροντομάτα Ατομική', '€4.00', '', 'Ατομική μερίδα αγγουροντομάτας.')">Αγγουροντομάτα Ατομική <span>€4.00</span></li>
+                <li class="clickable-item" onclick="openModal('Μαρούλι Σαλάτα', '€6.00', '', 'Σαλάτα με φρέσκο μαρούλι και ελαφριά σως.')">Μαρούλι Σαλάτα <span>€6.00</span></li>
+                <li class="clickable-item" onclick="openModal('Μαρούλι Σαλάτα Ατομική', '€4.00', '', 'Ατομική μερίδα σαλάτας μαρουλιού.')">Μαρούλι Σαλάτα Ατομική <span>€4.00</span></li>
+                <li class="clickable-item" onclick="openModal('Caesar', '€8.00', 'images/Ceasar.png', 'Κλασική Caesar με μαρούλι, παρμεζάνα και κρουτόν.')">Caesar <span>€8.00</span></li>
+                <li class="clickable-item" onclick="openModal('Caesar Ατομική', '€6.00', 'images/Ceasar.png', 'Ατομική μερίδα Caesar με μαρούλι, παρμεζάνα και κρουτόν.')">Caesar Ατομική <span>€6.00</span></li>
+                <li class="clickable-item" onclick="openModal('Χωριάτικη', '€7.00', '', 'Παραδοσιακή χωριάτικη με ντομάτα, αγγούρι, φέτα και ελιές.')">Χωριάτικη <span>€7.00</span></li>
+                <li class="clickable-item" onclick="openModal('Χωριάτικη Ατομική', '€5.50', '', 'Ατομική μερίδα χωριάτικης σαλάτας.')">Χωριάτικη Ατομική <span>€5.50</span></li>
+                <li class="clickable-item" onclick="openModal('Σεφ', '€8.00', '', 'Σαλάτα Σεφ με ποικιλία λαχανικών, ζαμπόν και τυρί.')">Σεφ <span>€8.00</span></li>
+                <li class="clickable-item" onclick="openModal('Σεφ Ατομική', '€6.00', '', 'Ατομική μερίδα σαλάτας Σεφ.')">Σεφ Ατομική <span>€6.00</span></li>
+                <li class="clickable-item" onclick="openModal('Τάκος Σαλάτα', '€7.00', '', 'Σαλάτα με βάση τάκος, φρέσκα λαχανικά και σως.')">Τάκος Σαλάτα <span>€7.00</span></li>
+                <li class="clickable-item" onclick="openModal('Τάκος Σαλάτα Ατομική', '€5.00', '', 'Ατομική μερίδα τάκος σαλάτας.')">Τάκος Σαλάτα Ατομική <span>€5.00</span></li>
+            </ul>
+        </section>
+
+
     </main>
 
     <!-- Location Section -->
