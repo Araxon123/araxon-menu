@@ -115,6 +115,7 @@
             </ul>
         </section>   
         
+ 
         <section>
             <h2>Σαλάτες</h2>
             <ul>
@@ -172,6 +173,89 @@
                 <li class="clickable-item" onclick="openModal('Monster', '€2.00', '', 'Ενεργειακό ποτό Monster με δυνατή γεύση και άμεση ενέργεια.')">Monster <span>€2.00</span></li>
             </ul>
         </section>
+       <!-- Build Your Own Sandwich -->
+       <section>
+        <h2>Φτιάξε το δικό σου σάντουιτς</h2>
+        <ul>
+            <li class="non-clickable">
+                <div id="sandwich-builder" class="builder-container">
+                    <div class="builder-group">
+                        <h3 class="builder-heading">Επίλεξε βάση</h3>
+                        <div class="options">
+                            <label class="option-chip">
+                                <input type="radio" name="bread" value="Ψωμάκι" data-price="0.60" checked>
+                                <span>Ψωμάκι (+€0.60)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="radio" name="bread" value="Αραβική" data-price="0.60">
+                                <span>Αραβική (+€0.60)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="builder-group">
+                        <h3 class="builder-heading">Υλικά</h3>
+                        <div class="options">
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Ζαμπόν" data-price="0.60">
+                                <span>Ζαμπόν (+€0.60)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Γαλοπούλα" data-price="0.70">
+                                <span>Γαλοπούλα (+€0.70)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Τυρί" data-price="0.50">
+                                <span>Τυρί (+€0.50)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Μπέικον" data-price="0.70">
+                                <span>Μπέικον (+€0.70)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Κοτόπουλο" data-price="1.50">
+                                <span>Κοτόπουλο (+€1.50)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Ντομάτα" data-price="0.30">
+                                <span>Ντομάτα (+€0.30)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Μαρούλι" data-price="0.30">
+                                <span>Μαρούλι (+€0.30)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Αγγούρι" data-price="0.30">
+                                <span>Αγγούρι (+€0.30)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Μαγιονέζα" data-price="0.20">
+                                <span>Μαγιονέζα (+€0.20)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Μουστάρδα" data-price="0.20">
+                                <span>Μουστάρδα (+€0.20)</span>
+                            </label>
+                            <label class="option-chip">
+                                <input type="checkbox" name="ingredient" value="Κέτσαπ" data-price="0.20">
+                                <span>Κέτσαπ (+€0.20)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="builder-summary">
+                        <div class="current-selection">
+                            <strong>Επιλογές:</strong> <span id="selection-text">Ψωμάκι</span>
+                        </div>
+                        <div class="current-price">
+                            <strong>Τρέχουσα τιμή:</strong> <span id="builder-price">€0.60</span>
+                        </div>
+                        <button type="button" id="builder-reset" class="builder-reset">Επαναφορά</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
 
     </main>
 

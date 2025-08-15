@@ -79,6 +79,44 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initially hide content
         content.style.display = 'none';
     });
+
+    // Sandwich Builder logic
+    const builder = document.getElementById('sandwich-builder');
+    if (builder) {
+        const priceEl = document.getElementById('builder-price');
+        const selectionTextEl = document.getElementById('selection-text');
+        const resetBtn = document.getElementById('builder-reset');
+
+        const formatPrice = (num) => `€${num.toFixed(2)}`;
+
+        const update = () => {
+            const bread = builder.querySelector('input[name="bread"]:checked');
+            const ingredients = Array.from(builder.querySelectorAll('input[name="ingredient"]:checked'));
+            const breadPrice = bread ? parseFloat(bread.dataset.price || '0') : 0;
+            const ingredientsTotal = ingredients.reduce((sum, i) => sum + parseFloat(i.dataset.price || '0'), 0);
+            const total = breadPrice + ingredientsTotal;
+
+            // Update price
+            priceEl.textContent = formatPrice(total);
+
+            // Update selection text
+            const selectedNames = [bread ? bread.value : null]
+                .concat(ingredients.map(i => i.value))
+                .filter(Boolean);
+            selectionTextEl.textContent = selectedNames.join(', ') || 'Καμία επιλογή';
+        };
+
+        builder.addEventListener('change', update);
+        resetBtn.addEventListener('click', () => {
+            const breadDefault = builder.querySelector('input[name="bread"]');
+            if (breadDefault) breadDefault.checked = true;
+            builder.querySelectorAll('input[name="ingredient"]').forEach(i => { i.checked = false; });
+            update();
+        });
+
+        // Initialize
+        update();
+    }
 });
 
 // Close modal when clicking outside of it
