@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Άλμπουμ | ΑΡΑΞΟΝ Coffee & Food</title>
+    <link rel="icon" type="image/png" href="../logo.png" sizes="16x16 32x32">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* Inline styles only for the album page (no changes to global CSS) */
+        .album-top-nav {
+            margin: 10px 0 6px 0;
+        }
+        .album-top-nav a {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px 40px;
+            border-radius: 35px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+            transition: all 0.4s ease, transform 0.2s ease;
+            border: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+        }
+        .album-top-nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        .album-top-nav a:hover::before { left: 100%; }
+        .album-top-nav a:hover {
+            background: linear-gradient(45deg, #ff8c42, #ff6b35);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 10px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.35s ease, opacity 0.35s ease;
+            will-change: transform;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Lightbox */
+        .album-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .album-lightbox img {
+            max-width: 95vw;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            border: 2px solid rgba(255,107,53,0.35);
+        }
+        .album-lightbox .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: rgba(255,255,255,0.12);
+            cursor: pointer;
+            font-size: 28px;
+            line-height: 1;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        @media (max-width: 600px) {
+            .gallery-item img { height: 180px; }
+            .album-top-nav a {
+                padding: 15px 25px;
+                font-size: 18px;
+                border-radius: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../logo.png" alt="ΑΡΑΞΟΝ Coffee & Food" class="logo">
+        <div class="album-top-nav">
+            <a href="/">← Μενού</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Φωτογραφίες</h2>
+            <div class="gallery-grid" id="galleryGrid"></div>
+            <p id="emptyState" style="display:none; color:#ccc; margin-top:14px;">Δεν υπάρχουν φωτογραφίες ακόμη. Προσθέστε αρχεία στον φάκελο photos και ενημερώστε το manifest.</p>
+        </section>
+    </main>
+
+    <div class="album-lightbox" id="albumLightbox" aria-hidden="true">
+        <span class="close-btn" id="albumClose" aria-label="Κλείσιμο">×</span>
+        <img id="albumImage" src="" alt="Προβολή εικόνας">
+    </div>
+
+    <footer>
+        <div class="copyright">
+            <p>© 2025 ΑΡΑΞΟΝ Coffee & Food</p>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            const lightbox = document.getElementById('albumLightbox');
+            const lightboxImg = document.getElementById('albumImage');
+            const closeBtn = document.getElementById('albumClose');
+            const grid = document.getElementById('galleryGrid');
+            const emptyState = document.getElementById('emptyState');
+
+            function open(src) {
+                lightboxImg.src = src;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                lightbox.setAttribute('aria-hidden', 'false');
+            }
+            function close() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImg.src = '';
+            }
+
+            function hydrateClicks(scope){
+                scope.querySelectorAll('.gallery-item img').forEach(img => {
+                    img.addEventListener('click', () => open(img.src));
+                });
+            }
+
+            async function loadPhotos(){
+                try {
+                    const res = await fetch('../photos/manifest.json', { cache: 'no-store' });
+                    if (!res.ok) throw new Error('manifest fetch failed');
+                    const list = await res.json();
+                    if (!Array.isArray(list) || list.length === 0) {
+                        emptyState.style.display = 'block';
+                        return;
+                    }
+                    const frag = document.createDocumentFragment();
+                    list.forEach(item => {
+                        const src = typeof item === 'string' ? `../photos/${item}` : `../photos/${item.src}`;
+                        const alt = typeof item === 'object' && item.alt ? item.alt : 'Photo';
+                        const fig = document.createElement('figure');
+                        fig.className = 'gallery-item';
+                        const img = document.createElement('img');
+                        img.loading = 'lazy';
+                        img.src = src;
+                        img.alt = alt;
+                        fig.appendChild(img);
+                        frag.appendChild(fig);
+                    });
+                    grid.appendChild(frag);
+                    hydrateClicks(grid);
+                } catch (e) {
+                    emptyState.style.display = 'block';
+                }
+            }
+            closeBtn.addEventListener('click', close);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+            loadPhotos();
+        })();
+    </script>
+</body>
+</html>
+
