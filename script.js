@@ -122,13 +122,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Close modal when clicking outside of it
+// Close modal when clicking outside of it or anywhere inside the modal
 window.onclick = function(event) {
     const modal = document.getElementById('productModal');
+    
+    // Close if clicking on the modal background
     if (event.target === modal) {
         closeModal();
     }
 }
+
+// Close modal when clicking anywhere inside the modal content
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('productModal');
+    const modalContent = document.querySelector('.modal-content');
+    
+    // Check if click is inside the modal content
+    if (modal.style.display === 'block' && modalContent.contains(event.target)) {
+        closeModal();
+    }
+});
 
 // Close modal with Escape key
 document.addEventListener('keydown', function(event) {
