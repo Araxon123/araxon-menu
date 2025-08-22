@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             icon = '🍔';
         } else if (titleText.includes('σαλάτες') || titleText.includes('salads')) {
             icon = '🥗';
+        } else if (titleText.includes('χυμοί') || titleText.includes('juices')) {
+            icon = '🧋';
         } else if (titleText.includes('αναψυκτικά') || titleText.includes('beverages')) {
             icon = '🥤';
         } else {
