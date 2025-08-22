@@ -9,7 +9,7 @@ function openModal(title, price, imageSrc, description) {
     modalTitle.textContent = title;
     modalPrice.textContent = price;
     // Fallback image when no specific image is provided
-    modalImage.src = imageSrc || 'images/cs.jpg';
+    modalImage.src = imageSrc || 'images/cs.webp';
     modalImage.alt = title;
     modalDescription.textContent = description;
     
